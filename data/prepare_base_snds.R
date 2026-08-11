@@ -311,11 +311,11 @@ tbl_snds_makeup <- tbl_snds |>
             5 * FA * DBT
     )
   ),
-  lambda_NIHSS_discharge = 6 -
-    3 * (Age_inclusion/60) -
-    2 * DBT -
-    1.5 * IRC -
-    2 * n_comorb,
+  lambda_NIHSS_discharge = 12 -
+    1.5 * (Age_inclusion/60) -
+    1 * DBT -
+    0.5 * IRC -
+    1 * n_comorb,
   lambda_NIHSS_discharge = if_else(lambda_NIHSS_discharge < 0, 0, lambda_NIHSS_discharge),
   NIHSS_discharge = pmax(
     0,
@@ -411,6 +411,10 @@ tbl_snds_makeup <- tbl_snds |>
 # RastaRocket::desc_var(tbl_snds_makeup |> select(-patient_id))
 
 write.csv(tbl_snds_makeup, file = "tbl_stroke.csv", row.names = FALSE)
+
+# tbl_snds_makeup |> 
+#   mutate(outcome = death_within_12_months == 1 | NIHSS_12_months > 0) |> 
+#   summary()
 
 # Test models -------------------------------------------------------------
 
