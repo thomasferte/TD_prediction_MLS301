@@ -1,0 +1,87 @@
+dag {
+"AVC M0-M12" [pos="0.144,-0.631"]
+"Age & Sexe" [pos="-2.104,-0.413"]
+"Décès M0-M12" [pos="0.248,-0.509"]
+"Délai de PEC AVC" [pos="-1.080,-1.013"]
+"IDM M0-M12" [pos="0.153,-0.412"]
+"Localisation AVC" [pos="-0.451,-1.162"]
+"MACE M0-M12" [pos="0.814,-0.490"]
+"NIHSS M12" [pos="0.970,-0.819"]
+"NIHSS Sortie Hospit" [pos="-0.107,-0.823"]
+"NIHSS initial" [pos="-0.733,-0.846"]
+"Taille AVC" [pos="-0.683,-1.088"]
+AIT [pos="-1.342,-0.751"]
+CI [pos="-1.703,-0.627"]
+DBT [pos="-2.079,-0.657"]
+FA [pos="-1.427,-0.568"]
+HTA [pos="-1.937,-0.546"]
+IRC [pos="-1.902,-0.742"]
+"AVC M0-M12" -> "Décès M0-M12"
+"AVC M0-M12" -> "MACE M0-M12"
+"AVC M0-M12" -> "NIHSS M12"
+"Age & Sexe" -> "AVC M0-M12"
+"Age & Sexe" -> "Décès M0-M12"
+"Age & Sexe" -> "IDM M0-M12"
+"Age & Sexe" -> "NIHSS M12"
+"Age & Sexe" -> "NIHSS initial"
+"Age & Sexe" -> AIT
+"Age & Sexe" -> CI
+"Age & Sexe" -> DBT
+"Age & Sexe" -> FA
+"Age & Sexe" -> HTA
+"Age & Sexe" -> IRC
+"Décès M0-M12" -> "MACE M0-M12"
+"Délai de PEC AVC" -> "NIHSS M12"
+"Délai de PEC AVC" -> "NIHSS Sortie Hospit"
+"Délai de PEC AVC" -> "NIHSS initial"
+"Délai de PEC AVC" -> "Taille AVC"
+"IDM M0-M12" -> "Décès M0-M12"
+"IDM M0-M12" -> "MACE M0-M12"
+"Localisation AVC" -> "NIHSS M12"
+"Localisation AVC" -> "NIHSS Sortie Hospit"
+"Localisation AVC" -> "NIHSS initial"
+"NIHSS Sortie Hospit" -> "NIHSS M12"
+"NIHSS initial" -> "NIHSS Sortie Hospit"
+"Taille AVC" -> "NIHSS M12"
+"Taille AVC" -> "NIHSS Sortie Hospit"
+"Taille AVC" -> "NIHSS initial"
+AIT -> "AVC M0-M12"
+AIT -> "NIHSS M12"
+AIT -> "NIHSS Sortie Hospit"
+AIT -> "NIHSS initial"
+CI -> "Décès M0-M12"
+CI -> "IDM M0-M12"
+CI -> FA
+DBT -> "AVC M0-M12"
+DBT -> "Décès M0-M12"
+DBT -> "IDM M0-M12"
+DBT -> "NIHSS M12"
+DBT -> "NIHSS Sortie Hospit"
+DBT -> "NIHSS initial"
+DBT -> "Taille AVC"
+DBT -> AIT
+DBT -> CI
+DBT -> IRC
+FA -> "AVC M0-M12"
+FA -> "Décès M0-M12"
+FA -> "NIHSS M12"
+FA -> "NIHSS Sortie Hospit"
+FA -> "NIHSS initial"
+FA -> "Taille AVC"
+FA -> AIT
+HTA -> "AVC M0-M12"
+HTA -> "Décès M0-M12"
+HTA -> "IDM M0-M12"
+HTA -> "NIHSS M12"
+HTA -> "NIHSS Sortie Hospit"
+HTA -> "NIHSS initial"
+HTA -> "Taille AVC"
+HTA -> AIT
+HTA -> CI
+HTA -> IRC
+IRC -> "AVC M0-M12"
+IRC -> "Décès M0-M12"
+IRC -> "IDM M0-M12"
+IRC -> "NIHSS initial"
+IRC -> CI
+}
